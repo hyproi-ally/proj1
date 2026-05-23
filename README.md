@@ -17,3 +17,6 @@ Suggestion 4: Report memory usage
 Another useful improvement is to report memory usage. This experience only reports running time. However, Flix fails on the HE PhysTH benchmark with an out-of-memory error. Reporting memory usage could better explain why Flix fails and why Ascent can finish the benchmark.
 
 Next, I will continue reading the papers that Yihao gave me and attempt to reproduce the experiment through coding.
+
+
+I obtained the analysis results by running clap-rs, which is taken from the paper Seamless Deductive Inference via Macros, using Ascent. The analysis took 2.313 seconds.
