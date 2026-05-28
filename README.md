@@ -1,3 +1,5 @@
+Date: May 22, 2026
+
 After reading this article “Seamless Deductive Inference via Macros”, I gained some insights. Firstly, Ascent uses lattice structures to control how inference results are merged through lattice operations such as join and meet, which correspond to least upper bounds and greatest lower bounds. This allows inference results to move through multiple layers of abstract states, from more precise values toward more general elements such as Top.
 
 By comparing Datafrog and Ascent with five Benchmarks, in the analysis, Datafrog is faster than Ascent except for clap-rs. However, Datafrog requires relation tuples to be in total order. Ascent does not impose this restriction. It provides higher flexibility. However, this flexibility may sacrifice some performance.
@@ -20,3 +22,8 @@ Next, I will continue reading the papers that Yihao gave me and attempt to repro
 
 
 I obtained the analysis results by running clap-rs, which is taken from the paper Seamless Deductive Inference via Macros, using Ascent. The analysis took 2.313 seconds.
+---------------------------------------------------------------------------------------
+
+Date: May 28, 2026
+
+
