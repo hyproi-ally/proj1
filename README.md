@@ -23,7 +23,19 @@ Next, I will continue reading the papers that Yihao gave me and attempt to repro
 
 I obtained the analysis results by running clap-rs, which is taken from the paper Seamless Deductive Inference via Macros, using Ascent. The analysis took 2.313 seconds.
 ---------------------------------------------------------------------------------------
+Date: May 29, 2026
 
-Date: May 28, 2026
+As of May 28, I have also continued reading the materials provided by Yihao, including “Chapter 1” and “Chapter 12.” I have finished Chapter 1 and am currently on page 20 of Chapter 12, which has 40 pages in total.
 
+A possible optimization direction is related to Ascent’s hash-based indexing. After reviewing the paper “Seamless Deductive Inference via Macros,” one potential idea is to evaluate alternative hash-map implementations for relation indexing in Ascent-style workloads.
+
+FxHashMap is a regular hash-map data structure using FxHasher, a fast and simple non-cryptographic hash function. FxHashMap can be faster than SipHash for trusted small-integer keys, because SipHash is designed with stronger protection against collision attacks and therefore may introduce higher hashing overhead. FxHashMap may also outperform AHashMap in specific workloads where symbolic keys have already been dictionary-encoded into compact u32 identifiers and the program performs tight, repeated Datalog join lookups.
+
+In this setting, the input domain is controlled and non-adversarial. Therefore, the stronger general-purpose mixing provided by AHash may become unnecessary overhead, while FxHash’s lightweight integer hashing may be sufficient. The paper “Seamless Deductive Inference via Macros” does not explicitly discuss concrete hash functions such as FxHash or AHash. However, it does mention that Ascent relies on hash-based indexing for relations. It also states that Ascent currently relies on hash-based indexing for relations, which improves generality but may sacrifice performance.
+
+Based on this observation, using FxHashMap for dictionary-encoded integer keys could be a possible small optimization to explore within the broader future-work direction of improving Ascent’s relation indexing performance. This would not necessarily constitute a major standalone contribution, but it may be worthwhile to evaluate FxHashMap as an alternative indexing backend for dictionary-encoded integer keys in Ascent/Polonius-style workloads.
+
+Overall, this direction appears to be more of an engineering optimization than a major theoretical contribution. However, if the evaluation shows consistent runtime improvements across relevant Datalog workloads, it could still serve as a useful empirical contribution and provide practical insight into the performance impact of hash-based indexing choices in Ascent.
+---------------------------------------------------------------------------------------
+Date: May 5, 2026
 
