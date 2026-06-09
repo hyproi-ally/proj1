@@ -39,3 +39,14 @@ Overall, this direction appears to be more of an engineering optimization than a
 ---------------------------------------------------------------------------------------
 Date: May 5, 2026
 
+By June 5, I had finished reading Chapter 12 and had begun reading the article “FlowLog: Efficient and Extensible Datalog via Incrementality.”
+
+I have used Ascent to run a family-relationship Datalog workload. The goal has not been to study family relations themselves, but to evaluate whether hash-based indexing optimizations, such as integer encoding, parallel execution, and FxHashMap/AHashMap, can make Ascent’s relation lookup and rule evaluation faster.
+
+First, I collected family-relationship data from Wikidata, including parent-child, male, female, and spouse relations in CSV format.
+
+Second, I converted the CSV files into Ascent-readable facts files. The conversion scripts clean the Wikidata CSV data and transform it into .facts files that can be loaded by the Ascent program.
+
+Third, I implemented Datalog-style rules in Ascent and ran the inference workload. In the FamilyProgram, parent, male, female, and spouse are user-defined input relations loaded from the .facts files, rather than built-in Ascent relations. Based on these input relations, I wrote additional Datalog-style rules to derive higher-level relations such as grandparent, ancestor, sibling, uncle, aunt, cousin, descendant, parent_in_law, and brother_in_law. The program then measures the runtime of prog.run(), records memory usage, and reports the number of derived relation pairs.
+
+At this stage, the main experimental implementation has been completed. I am currently organizing the experimental results, including runtime measurements, memory-usage records, and the numbers of derived relation pairs under different optimization settings. After checking and formatting these results, I plan to upload the corresponding data and analysis in the next few days.
