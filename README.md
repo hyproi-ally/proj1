@@ -50,3 +50,5 @@ Second, I converted the CSV files into Ascent-readable facts files. The conversi
 Third, I implemented Datalog-style rules in Ascent and ran the inference workload. In the FamilyProgram, parent, male, female, and spouse are user-defined input relations loaded from the .facts files, rather than built-in Ascent relations. Based on these input relations, I wrote additional Datalog-style rules to derive higher-level relations such as grandparent, ancestor, sibling, uncle, aunt, cousin, descendant, parent_in_law, and brother_in_law. The program then measures the runtime of prog.run(), records memory usage, and reports the number of derived relation pairs.
 
 At this stage, the main experimental work has been completed. I am currently organizing the experimental results, including runtime measurements, memory-usage records, and the numbers of derived relation pairs under different optimization settings. After checking and formatting these results, I plan to upload the corresponding data and analysis in the next few days.
+
+<img width="1669" height="519" alt="image" src="https://github.com/user-attachments/assets/68638f7e-d932-462f-92b0-8dd9a80b734f" />
