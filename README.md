@@ -37,7 +37,7 @@ Based on this observation, using FxHashMap for dictionary-encoded integer keys c
 
 Overall, this direction appears to be more of an engineering optimization than a major theoretical contribution. However, if the evaluation shows consistent runtime improvements across relevant Datalog workloads, it could still serve as a useful empirical contribution and provide practical insight into the performance impact of hash-based indexing choices in Ascent.
 ---------------------------------------------------------------------------------------
-Date: May 5, 2026
+Date: June 5, 2026
 
 By June 5, I had finished reading Chapter 12 and had begun reading the article “FlowLog: Efficient and Extensible Datalog via Incrementality.”
 
@@ -54,5 +54,4 @@ At this stage, the main experimental work has been completed. I am currently org
 <img width="1669" height="519" alt="image" src="https://github.com/user-attachments/assets/68638f7e-d932-462f-92b0-8dd9a80b734f" />
 *Note: The reported rule evaluation times are from stable repeated runs, excluding the first cold run. The output relation counts and memory usage remained unchanged.
 ---------------------------------------------------------------------------------------
-
-Date: May 12, 2026
+Date: June 12, 2026
