@@ -64,7 +64,4 @@ I started reading the article "FlowLog: Efficiency and Scalable Datalog via Incr
 
 I implemented a basic sequential Ascent/String version of the family-relationship workload. The purpose was to test whether the workload can support richer Datalog features, including transitive closure, negation, and aggregation.
 
-[View induction1.rs](./induction1.rs)
-
-[View induction1.rs](./src/bin/induction1.rs)
-
+For reference, the complete source code can be found here: [View induction1.rs](./induction1.rs)
