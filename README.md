@@ -52,3 +52,4 @@ Third, I implemented Datalog-style rules in Ascent and ran the inference workloa
 At this stage, the main experimental work has been completed. I am currently organizing the experimental results, including runtime measurements, memory-usage records, and the numbers of derived relation pairs under different optimization settings. After checking and formatting these results, I plan to upload the corresponding data and analysis in the next few days.
 
 <img width="1669" height="519" alt="image" src="https://github.com/user-attachments/assets/68638f7e-d932-462f-92b0-8dd9a80b734f" />
+*Note: The reported rule evaluation times are from stable repeated runs, excluding the first cold run. The output relation counts and memory usage remained unchanged.
