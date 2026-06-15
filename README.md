@@ -61,3 +61,5 @@ At this stage, the main experimental work has been completed. I am currently org
 Date: June 12, 2026
 
 I started reading the article "FlowLog: Efficiency and Scalable Datalog via Increment" on June 8th.
+
+I implemented a basic sequential Ascent/String version of the family-relationship workload. The purpose was to test whether the workload can support richer Datalog features, including transitive closure, negation, and aggregation.
